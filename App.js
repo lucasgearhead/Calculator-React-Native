@@ -45,9 +45,7 @@ const Calculator = () => {
           <CalculatorButton
             title="CLEAR"
             onPress={() => handleButtonPress("C")}
-            buttonStyle={{
-              flex: 4,
-            }}
+            buttonStyle={styles.flexButton}
             textStyle={{
               color: "red",
             }}
@@ -107,7 +105,7 @@ const Calculator = () => {
           <CalculatorButton
             title="0"
             onPress={() => handleButtonPress("0")}
-            buttonStyle={styles.zeroButton}
+            buttonStyle={styles.flexButton}
           />
           <CalculatorButton title="." onPress={() => handleButtonPress(".")} />
           <CalculatorButton
@@ -138,10 +136,7 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: "row",
   },
-  redText: {
-    color: "red",
-  },
-  zeroButton: {
+  flexButton: {
     flex: 4,
   },
 });
