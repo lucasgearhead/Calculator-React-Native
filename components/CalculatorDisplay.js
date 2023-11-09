@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 
-const CalculatorDisplay = ({ displayValue }) => {
+const CalculatorDisplay = ({ displayValue, primary }) => {
   const scrollViewRef = useRef();
 
   useEffect(() => {
@@ -17,7 +17,9 @@ const CalculatorDisplay = ({ displayValue }) => {
         horizontal
         showsHorizontalScrollIndicator={false}
       >
-        <Text style={styles.displayText}>{displayValue}</Text>
+        <Text style={primary ? styles.displayText : styles.displaySubText}>
+          {displayValue}
+        </Text>
       </ScrollView>
     </View>
   );
@@ -35,6 +37,12 @@ const styles = StyleSheet.create({
   displayText: {
     fontSize: 70,
     color: "white",
+    alignSelf: "center",
+  },
+  displaySubText: {
+    fontSize: 40,
+    color: "white",
+    opacity: 0.7,
     alignSelf: "center",
   },
 });

@@ -1,5 +1,5 @@
 // Importações
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { StyleSheet, View } from "react-native";
 
 import CalculatorButton from "./components/CalculatorButton";
@@ -8,10 +8,15 @@ import CalculatorDisplay from "./components/CalculatorDisplay";
 //App
 const Calculator = () => {
   const [displayValue, setDisplayValue] = useState("0");
+  const [secValue, setSecValue] = useState("0");
+
+  useEffect(() => {
+    calculateResult(displayValue);
+  }, [displayValue]);
 
   const handleButtonPress = (value) => {
     if (value === "=") {
-      calculateResult();
+      calculateResult("=");
     } else if (value === "C") {
       clearDisplay();
     } else if (value === "<") {
@@ -25,11 +30,19 @@ const Calculator = () => {
     }
   };
 
-  const calculateResult = () => {
-    try {
-      setDisplayValue(eval(displayValue).toString());
-    } catch (error) {
-      setDisplayValue("Error");
+  const calculateResult = (condition) => {
+    if (condition === "=") {
+      try {
+        setDisplayValue(eval(displayValue).toString());
+      } catch (error) {
+        setDisplayValue("Error");
+      }
+    } else {
+      try {
+        setSecValue(eval(condition).toString());
+      } catch (error) {
+        setSecValue(secValue);
+      }
     }
   };
 
@@ -39,7 +52,8 @@ const Calculator = () => {
 
   return (
     <View style={styles.container}>
-      <CalculatorDisplay displayValue={displayValue} />
+      <CalculatorDisplay displayValue={displayValue} primary={true} />
+      <CalculatorDisplay displayValue={secValue} primary={false} />
       <View style={styles.buttons}>
         <View style={styles.row}>
           <CalculatorButton
