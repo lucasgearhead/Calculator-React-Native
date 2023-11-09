@@ -9,8 +9,8 @@ O projeto é estruturado da seguinte forma:
   - `components`: Contém os componentes da calculadora.
     - `CalculatorButton.js`: Componente para os botões da calculadora.
     - `CalculatorDisplay.js`: Componente para exibição do resultado e operações.
-    - `Calculator.js`: Componente principal que monta a interface da calculadora.
-  - `App.js`: Componente principal do aplicativo.
+  - `Calculator.js`: Componente principal que monta a interface da calculadora.
+
 
 ## Funcionalidades
 
