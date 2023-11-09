@@ -2,6 +2,8 @@
 
 Este é um aplicativo simples de calculadora desenvolvido em React Native. Ele fornece funcionalidades básicas de uma calculadora, como adição, subtração, multiplicação, divisão e a capacidade de realizar operações matemáticas simples.
 
+![Demonstração do resultado](./GIF.gif)
+
 ## Estrutura do Projeto
 
 O projeto é estruturado da seguinte forma:
