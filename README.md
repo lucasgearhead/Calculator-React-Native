@@ -27,7 +27,7 @@ Para executar este aplicativo em seu ambiente local, siga estes passos:
 1. Certifique-se de ter o ambiente de desenvolvimento React Native configurado.
 2. Clone este repositório.
 3. Navegue até a pasta do projeto e execute `npm install` para instalar as dependências.
-4. Utilize `npm start` ou `npx react-native run-android` (ou `run-ios`) para iniciar o aplicativo no seu emulador ou dispositivo.
+4. Utilize `npx expo start` ou `npx react-native run-android` (ou `run-ios`) para iniciar o aplicativo no seu emulador ou dispositivo.
 
 ## Contribuições
 
