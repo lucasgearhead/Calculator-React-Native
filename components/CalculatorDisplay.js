@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 
 const CalculatorDisplay = ({ displayValue }) => {
+  const scrollViewRef = useRef();
+
+  useEffect(() => {
+    if (scrollViewRef.current) {
+      scrollViewRef.current.scrollToEnd({ animated: true });
+    }
+  }, [displayValue]);
+
   return (
     <View style={styles.display}>
-      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+      <ScrollView
+        ref={scrollViewRef}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+      >
         <Text style={styles.displayText}>{displayValue}</Text>
       </ScrollView>
     </View>
