@@ -25,7 +25,7 @@ const CalculatorDisplay = ({ displayValue }) => {
 
 const styles = StyleSheet.create({
   display: {
-    backgroundColor: "#151515",
+    backgroundColor: "#090909",
     padding: 10,
     width: "100%",
     height: "25%",
