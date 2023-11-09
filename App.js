@@ -52,7 +52,13 @@ const Calculator = () => {
               color: "red",
             }}
           />
-          <CalculatorButton title="<" onPress={() => handleButtonPress("<")} />
+          <CalculatorButton
+            title="<"
+            onPress={() => handleButtonPress("<")}
+            textStyle={{
+              color: "green",
+            }}
+          />
           <CalculatorButton
             title="/"
             onPress={() => handleButtonPress("/")}
