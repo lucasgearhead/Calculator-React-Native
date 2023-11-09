@@ -11,7 +11,7 @@ const CalculatorDisplay = ({ displayValue, primary }) => {
   }, [displayValue]);
 
   return (
-    <View style={styles.display}>
+    <View style={primary ? styles.display : styles.secDisplay}>
       <ScrollView
         ref={scrollViewRef}
         horizontal
@@ -30,7 +30,15 @@ const styles = StyleSheet.create({
     backgroundColor: "#090909",
     padding: 10,
     width: "100%",
-    height: "25%",
+    height: "20%",
+    alignItems: "flex-end",
+    justifyContent: "center",
+  },
+  secDisplay: {
+    backgroundColor: "#090909",
+    padding: 10,
+    width: "100%",
+    height: "15%",
     alignItems: "flex-end",
     justifyContent: "center",
   },
