@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   button: {
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#171717", // Background color of the button
+    backgroundColor: "#101010", // Background color of the button
     borderRadius: 5, // Button border radius
     paddingVertical: 20, // Vertical padding inside the button
     paddingHorizontal: 30, // Horizontal padding inside the button
